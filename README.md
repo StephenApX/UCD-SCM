@@ -1,6 +1,8 @@
 # Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Building
 
-Open-source codes of CVEO recent work ["Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Buildings"](https://arxiv.org/abs/2312.16410) (ArXiv).
+Open-source codes of [CVEO](https://github.com/cveo) recent work ["Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Buildings"](https://arxiv.org/abs/2312.16410) (ArXiv).
+
+To the best of our knowledge, this work is the first to apply multimodal large language models (MLLM) to remote sensing image change detection without the need for fine-tuning. This represents a preliminary exploration of the application of general AI in industry.
 
 ## Method
 
@@ -43,7 +45,7 @@ pip install git+https://github.com/openai/CLIP.git
 ```
 
 * **Copy** 'FastSAM' under 'SCM' folder.
-* Download Pretrained model weights of FastSAM(FastSAM_X.pt)[[GoogleLink](https://drive.google.com/file/d/1m1sjY4ihXBU1fZXdQ-Xdj-mDltW-2Rqv/viewhttps:/)/[BaiduLink](https://pan.baidu.com/s/18KzBmOTENjByoWWR17zdiQ?from=init&pwd=0000https:/)] and CLIP(ViT-B-32.pt)[[OpenAILink](https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pthttps:/)] and place then in **'weights/' folder**.
+* Download Pretrained model weights of FastSAM(FastSAM_X.pt)[[GoogleDriveLink](https://drive.google.com/file/d/1m1sjY4ihXBU1fZXdQ-Xdj-mDltW-2Rqv/viewhttps:/)/[BaiduDriveLink](https://pan.baidu.com/s/18KzBmOTENjByoWWR17zdiQ?from=init&pwd=0000https:/)] and CLIP(ViT-B-32.pt)[[OpenAILink](https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pthttps:/)] and place then in **'weights/' folder**.
 * In order to generate FastSAM segmentation masks and extract featrues from FastSAM's encoder simultaneously, we modified few codes and store them in **'tbr' folder**, you need to **replace** the original codes from 'ultralytics' packages in the installed conda env:
   * replace "tbr/head.py" in "anaconda3/envs/your_conda_env_name/Lib/site-packages/ultralytics/nn/modules/head.py"
   * replace "tbr/predictor.py" in "anaconda3/envs/your_conda_env_name/Lib/site-packages/ultralytics/yolo/engine/predictor.py"
@@ -109,13 +111,11 @@ python SCM.py -m RFF PSA --sam_weight_path weights/FastSAM_X.pt --clip_weight_pa
 Please consider citing the following paper if you used this project in your research.
 
 ```shell
-@misc{tan2023segment,
-      title={Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Buildings}, 
-      author={Xiaoliang Tan and Guanzhou Chen and Tong Wang and Jiaqi Wang and Xiaodong Zhang},
-      year={2023},
-      eprint={2312.16410},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{tan2023segment,
+  title={Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Buildings},
+  author={Tan, Xiaoliang and Chen, Guanzhou and Wang, Tong and Wang, Jiaqi and Zhang, Xiaodong},
+  journal={arXiv preprint arXiv:2312.16410},
+  year={2023}
 }
 ```
 
@@ -130,3 +130,5 @@ Appreciate the work from the following repositories:
 * FastSAM: [https://github.com/CASIA-IVA-Lab/FastSAM](https://github.com/CASIA-IVA-Lab/FastSAMhttps:/)
 * CLIP: [https://github.com/openai/CLIP](https://github.com/openai/CLIPhttps:/)
 * SAM-CD: [https://github.com/ggsDing/SAM-CD](https://github.com/ggsDing/SAM-CD)
+* OBIC-GCN：[https://github.com/CVEO/OBIC-GCN](https://github.com/CVEO/OBIC-GCN)
+* Unsupervised-OBIC-Pytorch: [https://github.com/CVEO/Unsupervised-OBIC-Pytorch](https://github.com/CVEO/Unsupervised-OBIC-Pytorch)
