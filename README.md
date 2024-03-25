@@ -1,6 +1,6 @@
 # Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Building
 
-Open-source codes of [CVEO](https://github.com/cveo) recent work ["Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Buildings"](https://arxiv.org/abs/2312.16410) (ArXiv).
+Open-source codes of [CVEO](https://github.com/cveo) recent research ["Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Buildings"](https://arxiv.org/abs/2312.16410) (ArXiv), which has been recently accepted for inclusion as an **Oral** presentation in the [IGARSS 2024](https://2024.ieeeigarss.org/index.php#welcomehttps:/).
 
 To the best of our knowledge, this work is the first to apply multimodal large language models (MLLM) to remote sensing image change detection without the need for fine-tuning. This represents a preliminary exploration of the application of general AI in industry.
 
