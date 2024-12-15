@@ -1,6 +1,6 @@
 # Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Building
 
-Open-source codes of [CVEO](https://github.com/cveo) recent research ["Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Buildings"](https://arxiv.org/abs/2312.16410) (ArXiv), which has been recently accepted for inclusion as an **Oral** presentation in the [IGARSS 2024](https://2024.ieeeigarss.org/index.php#welcomehttps:/).
+Open-source codes of [CVEO](https://github.com/cveo) recent research ["Segment Change Model (SCM) for Unsupervised Change detection in VHR Remote Sensing Images: a Case Study of Buildings"](https://arxiv.org/abs/2312.16410) (ArXiv), which has been recently accepted for inclusion as an **Oral** presentation in the [IGARSS 2024](https://2024.ieeeigarss.org/index.php#welcome).
 
 To the best of our knowledge, this work is the first to apply multimodal large language models (MLLM) to remote sensing image change detection without the need for fine-tuning. This represents a preliminary exploration of the application of general AI in industry.
 
@@ -35,7 +35,7 @@ conda activate SCM
 
 ### Installation
 
-* Follow the instructions of installing [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAMhttps:/) and [CLIP](https://github.com/openai/CLIPhttps:/):
+* Follow the instructions of installing [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) and [CLIP](https://github.com/openai/CLIP):
 
 ```shell
 git clone https://github.com/CASIA-IVA-Lab/FastSAM.git
@@ -45,7 +45,7 @@ pip install git+https://github.com/openai/CLIP.git
 ```
 
 * **Copy** 'FastSAM' under 'SCM' folder.
-* Download Pretrained model weights of FastSAM(FastSAM_X.pt)[[GoogleDriveLink](https://drive.google.com/file/d/1m1sjY4ihXBU1fZXdQ-Xdj-mDltW-2Rqv/viewhttps:/)/[BaiduDriveLink](https://pan.baidu.com/s/18KzBmOTENjByoWWR17zdiQ?from=init&pwd=0000https:/)] and CLIP(ViT-B-32.pt)[[OpenAILink](https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pthttps:/)] and place then in **'weights/' folder**.
+* Download Pretrained model weights of FastSAM(FastSAM_X.pt)[[GoogleDriveLink](https://drive.google.com/file/d/1m1sjY4ihXBU1fZXdQ-Xdj-mDltW-2Rqv/view)/[BaiduDriveLink](https://pan.baidu.com/s/18KzBmOTENjByoWWR17zdiQ?from=init&pwd=0000)] and CLIP(ViT-B-32.pt)[[OpenAILink](https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt)] and place then in **'weights/' folder**.
 * In order to generate FastSAM segmentation masks and extract featrues from FastSAM's encoder simultaneously, we modified few codes and store them in **'tbr' folder**, you need to **replace** the original codes from 'ultralytics' packages in the installed conda env:
   * replace "tbr/head.py" in "anaconda3/envs/your_conda_env_name/Lib/site-packages/ultralytics/nn/modules/head.py"
   * replace "tbr/predictor.py" in "anaconda3/envs/your_conda_env_name/Lib/site-packages/ultralytics/yolo/engine/predictor.py"
@@ -65,7 +65,7 @@ Soon you'll acquire cd results in 'results/samples_levir/'.
 
 ### Quick Start on WHU-CD dataset
 
-We have prepared samples from [WHU-CD](https://study.rsgis.whu.edu.cn/pages/download/building_dataset.htmlhttps://justchenhao.github.io/LEVIR) dataset in the 'data/samples_WHU-CD' folder for a quick start.
+We have prepared samples from [WHU-CD](https://study.rsgis.whu.edu.cn/pages/download/building_dataset.html) dataset in the 'data/samples_WHU-CD' folder for a quick start.
 
 Run like:
 
@@ -127,8 +127,8 @@ Code is released for non-commercial and research purposes **ONLY**. For commerci
 
 Appreciate the work from the following repositories:
 
-* FastSAM: [https://github.com/CASIA-IVA-Lab/FastSAM](https://github.com/CASIA-IVA-Lab/FastSAMhttps:/)
-* CLIP: [https://github.com/openai/CLIP](https://github.com/openai/CLIPhttps:/)
+* FastSAM: [https://github.com/CASIA-IVA-Lab/FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM)
+* CLIP: [https://github.com/openai/CLIP](https://github.com/openai/CLIP)
 * SAM-CD: [https://github.com/ggsDing/SAM-CD](https://github.com/ggsDing/SAM-CD)
 * OBIC-GCN：[https://github.com/CVEO/OBIC-GCN](https://github.com/CVEO/OBIC-GCN)
 * Unsupervised-OBIC-Pytorch: [https://github.com/CVEO/Unsupervised-OBIC-Pytorch](https://github.com/CVEO/Unsupervised-OBIC-Pytorch)
